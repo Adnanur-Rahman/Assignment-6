@@ -32,7 +32,7 @@
     <header class="bg-[#15803D] p-3">
       <div class="flex justify-between items-center mx-5">
         <h1 class="text-[#FFFFFF] font-bold text-xl">Green Earth</h1>
-        <ul class="flex gap-4 text-[#FFFFFF] text-[13px]">
+        <ul class="hidden md:flex gap-4 text-[#FFFFFF] text-[13px]">
           <li>About</li>
           <li>Gallery</li>
           <li>Plant a Tree</li>
@@ -42,9 +42,13 @@
     </header>
     <section class="bg-[#CFF0DC]">
       <div class="flex justify-between items-center">
-        <div><img class="" src="./assets/hero-leaf1.png" alt="" /></div>
+        <div>
+          <img class="h-full w-full" src="./assets/hero-leaf1.png" alt="" />
+        </div>
         <div class="w-200 text-center">
-          <h1 class="font-bold text-[48px]">Plant a Tree, Grow a Future</h1>
+          <h1 class="text-[20px] font-bold mt-5 md:text-[48px]">
+            Plant a Tree, Grow a Future
+          </h1>
           <p>
             Join our mission to plant 1 million trees and make the Earth greener
             for future generations.
@@ -80,16 +84,16 @@
     </section>
     <section class="bg-[#CFF0DC] py-10 mt-5">
       <h1 class="text-center font-semibold text-[32px] mb-5">Our Impact</h1>
-      <div class="flex justify-center items-center gap-4">
-        <div class="bg-[#FFFFFF] px-[156px] py-5">
+      <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+        <div class="bg-[#FFFFFF] py-5 w-50 text-center md:px-[156px]">
           <h1 class="text-[#15803D] font-semibold text-[32px]">500K+</h1>
           <p>Trees Planted</p>
         </div>
-        <div class="bg-[#FFFFFF] px-[156px] py-5">
+        <div class="bg-[#FFFFFF] py-5 w-50 text-center md:px-[156px]">
           <h1 class="text-[#15803D] font-semibold text-[32px]">120+</h1>
           <p>Communities Involved</p>
         </div>
-        <div class="bg-[#FFFFFF] px-[156px] py-5">
+        <div class="bg-[#FFFFFF] py-5 w-50 text-center md:px-[156px]">
           <h1 class="text-[#15803D] font-semibold text-[32px]">30+</h1>
           <p>Countries Reached</p>
         </div>
@@ -99,24 +103,30 @@
       <h1 class="text-[#FFFFFF] text-center font-semibold text-[32px] py-5">
         Plant a Tree Today
       </h1>
-      <div class="bg-[#15803D] py-5 w-[650px] mx-auto rounded-xl">
+      <div class="bg-[#15803D] py-5 px-6 md:px-12 rounded-xl w-11/12 mx-auto">
         <div class="flex flex-col justify-center items-center gap-2 pt-2">
-          <input type="text" placeholder="Your Name" class="input w-100" />
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="input w-72 md:w-96"
+          />
 
           <input
             type="email"
             placeholder="Your Email Address"
-            class="w-100 input"
+            class="w-72 md:w-96 input"
           />
 
-          <select class="select select-neutral w-100">
+          <select class="select select-neutral w-72 md:w-96">
             <option disabled selected>Number of Trees</option>
             <option>1 Tree-$5</option>
             <option>5 Tree-$25</option>
             <option>10 Tree-$50</option>
           </select>
 
-          <button class="btn-yellow rounded-full p-2 w-100">Donate Now</button>
+          <button class="btn-yellow rounded-full p-2 w-72 md:w-100">
+            Donate Now
+          </button>
         </div>
       </div>
     </section>
