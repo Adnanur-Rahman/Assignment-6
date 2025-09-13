@@ -11,7 +11,6 @@ const displayCat = (data) => {
   fruitArray.forEach((name) => {
     const button = document.createElement("button");
     button.textContent = name;
-
     button.className =
       "rounded-lg w-full text-black hover:bg-green-400 hover:text-white my-1 p-2";
     button.addEventListener("click", () => {
