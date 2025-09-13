@@ -15,6 +15,12 @@ const displayCat = (data) => {
     button.className =
       "rounded-lg w-full text-black hover:bg-green-400 hover:text-white my-1 p-2";
     button.addEventListener("click", () => {
+      catagoriesDiv.querySelectorAll("button").forEach((btn) => {
+        btn.classList.remove("bg-green-400", "text-white");
+        btn.classList.add("text-black");
+      });
+      button.classList.add("bg-green-400", "text-white");
+      button.classList.remove("text-black");
       card(name);
     });
     catagoriesDiv.appendChild(button);
@@ -48,18 +54,18 @@ const displayCard = (data, categoryName) => {
 
     const card = document.createElement("div");
     card.innerHTML = `
-      <div  class="rounded-xl ${category} p-3 shadow-md bg-white cursor-pointer hover:shadow-lg transition"
+      <div  class="rounded-xl ${category} p-3 shadow-md bg-white cursor-pointer hover:shadow-lg flex flex-col  h-full"
         onclick="document.getElementById('modal-${id}').showModal()">
-        <img class="h-72 w-full" src="${image}" alt="" />
+        <img class="h-72 w-full object-cover rounded-lg" src="${image}" alt="" />
         <h1 class="font-bold">${name}</h1>
-        <p>${description}</p>
+        <p  class="line-clamp-3 mt-1">${description}</p>
         <div class="flex justify-between">
           <span class="text-[#15803D]">${category}</span>
           <span class="font-bold">৳${price}</span>
         </div>
         <div class="text-center">
           <button
-            class="rounded-full addCart bg-[#15803D] mt-2 w-full p-2 text-[#FFFFFF] cursor-pointer"
+            class="rounded-full addCart bg-[#15803D] mt-2 w-full h-full p-2 text-[#FFFFFF] cursor-pointer"
             data-name="${name}"
             data-price="${price}">
             Add to Cart
