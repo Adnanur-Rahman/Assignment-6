@@ -6,13 +6,17 @@ const catagori = () => {
 };
 
 const displayCat = (data) => {
-  const fruitArray = data.categories.map((item) => item.category_name);
+  const fruitArray = [
+    "All Trees",
+    ...data.categories.map((item) => item.category_name),
+  ];
   const catagoriesDiv = document.getElementById("catagories-div");
   fruitArray.forEach((name) => {
     const button = document.createElement("button");
     button.textContent = name;
     button.className =
       "rounded-lg w-full text-black hover:bg-green-400 hover:text-white my-1 p-2";
+
     button.addEventListener("click", () => {
       catagoriesDiv.querySelectorAll("button").forEach((btn) => {
         btn.classList.remove("bg-green-400", "text-white");
@@ -20,7 +24,11 @@ const displayCat = (data) => {
       });
       button.classList.add("bg-green-400", "text-white");
       button.classList.remove("text-black");
-      card(name);
+      if (name === "All Trees") {
+        card();
+      } else {
+        card(name);
+      }
     });
     catagoriesDiv.appendChild(button);
   });
