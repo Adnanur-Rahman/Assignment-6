@@ -40,6 +40,10 @@
         background-color: #facc15;
         color: #15803d;
       }
+      .active{
+        background-color: #15803D;
+        color:#FFFFFF;
+      }
     </style>
   </head>
   <body>
@@ -67,6 +71,7 @@
         <button class="btn-yellow rounded-full p-2">Plant a Tree</button>
       </div>
     </header>
+    <!-- banner -->
     <section class="bg-[#CFF0DC]">
       <div class="flex justify-between items-center">
         <div>
@@ -87,25 +92,55 @@
         <div><img class="" src="./assets/hero-leaf2.png" alt="" /></div>
       </div>
     </section>
-    <!-- card -->
+    <!-- Dynamic Section -->
     <section class="">
       <h1 class="text-center font-semibold text-[32px]">Choose Your Trees</h1>
       <div class="flex flex-col md:flex-row justify-around">
 <div class="p-4 md:w-2/3">
-  <h1 class="font-semibold text-[20px] mb-2">Categories</h1>
-  <div id="catagories-div" class=" gap-2 ">
+  <h1 class="font-semibold text-[20px] mb-2 text-center md:text-left">Categories</h1>
+  <!-- categories button -->
+  <div id="catagories-div" class=" gap-2 flex flex-col ">
+    <div class="text-center md:text-left"><button onclick="activeBtn('btn-cat-0');treesCard()" id="btn-cat-0" class="btn btn-soft btn-success text-black active btn-cat hover:text-white">All Trees</button></div>
   </div>
 </div>
+ <!-- plants card -->
+     <div id="spinner" class="hidden mx-auto">
+  <span class="loading loading-dots loading-xl"></span>
+</div>
         <div id="plants-card" class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 items-stretch">
-          
+
           </div>
-<div id="cart-section" class="w-full mb-5 md:w-2/3 bg-white rounded-lg p-4 shadow-md ">          
+
+          <!-- cart -->
+<div class="w-full mb-5 md:w-2/3 bg-white rounded-lg p-4 shadow-md ">          
    <h1 class="font-semibold text-[20px]">Your Cart</h1>
+   <div id="cart-section" class="flex flex-col justify-between">
+<!-- <div>
+  <h1 class="font-bold">Mango</h1>
+<p> ৳500×1</p>
+</div>
+<div>
+<i class="fa-solid fa-xmark" style="color: rgb(249, 100, 100);"></i>
+</div> -->
+ 
           
         </div>
+         <div id="vanish-total" class="hidden flex justify-between mt-2">
+      <span>Total</span>  <span id="taka">৳0</span>
+      </div>
+
         </div>
       </div>
     </section>
+    <!-- modal -->
+    <section><!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div id="modalContainer" class="modal-box">
+   
+   
+  </div>
+</dialog></section>
 
     <section>
       <h1 class="text-center font-semibold text-[32px]">About the Campaign</h1>
@@ -181,6 +216,7 @@
     <footer class="bg-[#14532D] text-[#FFFFFF] text-center p-[24px]">
       <small>@ 2025 Green Earth. All Rights Reserved.</small>
     </footer>
-    <script src="./java.js"></script>
+    <!-- <script src="./java.js"></script> -->
+      <script src="./javanew.js"></script>
   </body>
 </html>
