@@ -104,7 +104,7 @@ const displayModal=(plant)=>{
    console.log("modalContainer");
    modalContainer.innerHTML=` <div class="card">
     <h1 class="font-extrabold my-2  text-xl md:text-2xl">${plant.name}</h1>
-            <div ><img class="rounded-xl" src="${plant.image}"alt=""></div>
+            <div ><img class="rounded-xl w-full h-auto object-cover" src="${plant.image}"alt=""></div>
             <div>
              <p class="my-2"> <span class="font-bold">Category: </span>${plant.category}</p>
                      <p class="my-2"><span class="font-bold">Price: </span>৳${plant.price}</p>
