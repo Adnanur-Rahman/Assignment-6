@@ -73,8 +73,8 @@ plants.forEach(plant=>{
    const card=document.createElement("div");
    card.innerHTML=`
    
-         <div class="card">
-            <div ><img class="w-full h-48 object-cover rounded-lg" src="${plant.image}"alt=""></div>
+         <div class="card rounded-xl shadow-sm  py-2 px-2">
+            <div ><img class="w-full h-80  object-cover rounded-lg md:h-60" src="${plant.image}"alt=""></div>
             <div>
               <h1 onclick="treesDetails('${plant.id}')" class="cursor-pointer  font-bold text-xl hover:font-extrabold md:text-2xl">${plant.name}</h1>
               <p class="line-clamp-2">${plant.description}</p>
